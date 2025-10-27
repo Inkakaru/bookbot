@@ -18,3 +18,18 @@ def char_frequency(book_text):
         else:
             frequency[char] = 1
     return frequency
+
+# write a new function that takes the dictionary of characters and their counts
+# and returns a sorted list of dictionaries
+def sort_on(items):
+    return items["num"]
+
+def numerical_sort(char_dict):
+    char_list = []
+    for char, count in char_dict.items():
+        if char.isalpha():
+            char_list.append({"char": char, "num": count})
+    char_list.sort(key=sort_on, reverse=True) 
+
+    return char_list
+    
